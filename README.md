@@ -1,2 +1,2 @@
 # My_chrome_extensions
-公需课插件
+chrome 插件
