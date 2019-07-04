@@ -1,0 +1,15 @@
+﻿{
+  "name": "test",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "test自动插件！",
+  "browser_action": {
+    "default_icon": "test.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.baidu.com/*"],
+      "js": ["jquery.min.js","script.js"]
+    }
+  ]
+}
