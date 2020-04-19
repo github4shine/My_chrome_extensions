@@ -52,8 +52,8 @@ function answer_question(){
     var exam_content = $("#gvQuestion");
     if(exam_content)
     {
-        wrang_list = getWrangList();
-        answer_list = {};
+        let wrang_list = getWrangList();
+        let answer_list = {};
         exam_content = exam_content[0];
         exam_title_list = exam_content.getElementsByClassName("tablestyle");
         exam_answer_list = exam_content.getElementsByClassName("tablestyle2");
@@ -76,7 +76,14 @@ function answer_question(){
                     if(title_text == element){
                         answer_list[title_text] += 1;
                     }
-                    input_list[answer_list[title_text]].click();
+                    btn_answer = input_list[answer_list[title_text]];
+                    if(btn_answer){
+                        btn_answer.click();
+                    }
+                    else{
+                        answer_list[title_text]= 0;
+                        input_list[answer_list[title_text]].click();
+                    }
                 }
             });
         }
