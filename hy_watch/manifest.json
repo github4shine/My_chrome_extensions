@@ -1,0 +1,15 @@
+﻿{
+  "name": "hy_watch",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "华医网继续教育学习插件！",
+  "browser_action": {
+    "default_icon": "jf_icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*.91huayi.com/*"],
+      "js": ["jquery.min.js","exam_answer.js","script.js"]
+    }
+  ]
+}
